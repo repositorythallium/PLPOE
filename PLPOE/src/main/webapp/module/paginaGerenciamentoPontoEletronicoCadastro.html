@@ -335,7 +335,7 @@
 								<i class="ti-search"></i>
 							</a>
 							<form class="app-search">
-								<input type="text" class="form-control" placeholder="Pesquisar..."> 
+								<input type="text" class="form-control" placeholder="Perquisar..."> 
 									<a class="srh-btn">
 										<i class="ti-close"></i>
 									</a>
@@ -388,12 +388,17 @@
 		
 		<!-- [MENU_LATERAL] -->
 		<aside class="left-sidebar">
+		
 			<div class="d-flex no-block nav-text-box align-items-center">
-				<span><img src="../module/assets/images/plpoe_logo.png" alt="elegant admin template"></span> <a
-					class="nav-lock waves-effect waves-dark ml-auto hidden-md-down" href="javascript:void(0)"><i
-						class="mdi mdi-toggle-switch"></i></a>
-				<a class="nav-toggler waves-effect waves-dark ml-auto hidden-sm-up" href="javascript:void(0)"><i
-						class="ti-menu ti-close"></i></a>
+				<span>
+					<img src="../module/assets/images/plpoe_logo.png" alt="elegant admin template">
+				</span> 
+				<a class="nav-lock waves-effect waves-dark ml-auto hidden-md-down" href="javascript:void(0)">
+					<i class="mdi mdi-toggle-switch"></i>
+				</a>
+				<a class="nav-toggler waves-effect waves-dark ml-auto hidden-sm-up" href="javascript:void(0)">
+					<i class="ti-menu ti-close"></i>
+				</a>
 			</div>
 
 			<div class="scroll-sidebar">
@@ -406,7 +411,7 @@
 							</a>
 							<ul aria-expanded="false" class="collapse">
 								<li>
-									<a href="index.html">Detalhamento<i class="far fa-circle text-success"></i>
+									<a href="#">Detalhamento<i class="far fa-circle text-success"></i>
 									</a>
 								</li>
 							</ul>
@@ -447,7 +452,7 @@
 			<div class="container-fluid">
 				<div class="row page-titles">
 					<div class="col-md-5 align-self-center">
-						<h4 class="text-themecolor">Painel de Controle</h4>
+						<h4 class="text-themecolor">Registro de Ponto Eletrônico</h4>
 					</div>
 					<div class="col-md-7 align-self-center text-right">
 						<div class="d-flex justify-content-end align-items-center">
@@ -459,204 +464,57 @@
 						</div>
 					</div>
 				</div>
-
+				
+				<!-- [CONTEUDO] -->
 				<div class="row">
-					<!-- Column -->
-					<div class="col-lg-6">
-						<div class="card card-body">
-							<h5 class="card-title text-white">Crédito Banco de Horas
-								(Consolidado)</h5>
-							<div class="row">
-								<div class="col-6 m-t-30">
-									<h1 class="text-info">12:33</h1>
-									<p class="text-muted"></p>
-									<b>(Setembro/2019)</b>
-								</div>
-								<div class="col-6">
-									<div id="sparkline1dash" class="text-right"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-6">
-						<div class="card card-body">
-							<h5 class="card-title text-white">Débito Banco de Horas
-								(Consolidado)</h5>
-							<div class="row">
-								<div class="col-6 m-t-30">
-									<h1 class="text-info">11:33</h1>
-									<p class="text-muted"></p>
-									<b>(150 Sales)</b>
-								</div>
-								<div class="col-6">
-									<div id="sparkline2dash" class="text-right m-t-30"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-
 					<div class="col-lg-12">
 						<div class="card card-body">
-							<h5 class="card-title text-white">Débito Banco de Horas
-								(Parcial)</h5>
-							<div class="row">
-								<div class="col-6 m-t-30">
-									<h1 class="text-danger">00:00</h1>
-									<p class="text-muted"></p>
-									<b>(150 Sales)</b>
+							<form class="row row-space-10 m-b-10">
+								<div class="form-group col-md-6">
+									<label for="entrada_i" class="text-white">Entrada I <span class="text-danger">*</span> </label> 
+									<input id="entrada_i" name="entrada_i" type="text" placeholder="00H 00M" class="form-control" />
 								</div>
-								<div class="col-6">
-									<div id="sparkline4dash" class="text-right"></div>
+								<div class="form-group col-md-6">
+									<label for="saida_i" class="text-white">Saída I <span class="text-danger">*</span> </label> 
+									<input id="saida_i" name="saida_i" type="text" placeholder="Horário da Saída I" class="form-control" />
 								</div>
-							</div>
+								<div class="form-group col-md-6">
+									<label for="entrada_ii" class="text-white">Entrada II <span class="text-danger">*</span> </label> 
+									<input id="entrada_ii" name="entrada_ii" type="text" placeholder="Horário da Entrada II" class="form-control" />
+								</div>
+								<div class="form-group col-md-6">
+									<label for="saida_ii" class="text-white">Saída II <span class="text-danger">*</span> </label> 
+									<input id="saida_ii" name="saida_ii" type="text" placeholder="Horário da Saída II" class="form-control" />
+								</div>
+							</form>
 						</div>
 					</div>
-
 				</div>
+				
 				<div class="row">
-					<!-- Column -->
-					<div class="col-lg-12 col-md-12">
-						<div class="card">
-							<div class="card-body">
-								<h5 class="card-title text-white">Histórico de Registro de
-									Ponto Eletrônico</h5>
-							</div>
-							<div class="table-responsive">
-								<table class="table table-striped">
-									<thead>
-										<tr>
-											<th>Código</th>
-											<th class="text-center">Data Registro</th>
-											<th class="text-center">Entrada I</th>
-											<th class="text-center">Saída I</th>
-											<th class="text-center">Entrada II</th>
-											<th class="text-center">Saída II</th>
-											<th class="text-center">Situação</th>
-											<th class="text-center">Extrato de Saldo</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><a href="javascript:void(0)" class="link text-center">0001</a></td>
-											<td class="text-center">02/09/2019</td>
-											<td class="text-center">10H 45M</td>
-											<td class="text-center">14H 23M</td>
-											<td class="text-center">15H 23M</td>
-											<td class="text-center text-danger"><b>19H 45M</b></td>
-											<td class="text-center">
-												<div class="label label-table label-danger">Ajustar
-													Horário</div>
-											</td>
-											<td class="text-center">-1H 30M</td>
-										</tr>
-										<tr>
-											<td><a href="javascript:void(0)" class="link text-center">0002</a></td>
-											<td class="text-center">03/09/2019</td>
-											<td class="text-center">10H 45M</td>
-											<td class="text-center">14H 23M</td>
-											<td class="text-center">15H 23M</td>
-											<td class="text-center">19H 45M</td>
-											<td class="text-center">
-												<div class="label label-table label-success">Sem
-													Pendência</div>
-											</td>
-											<td class="text-center">-1H 30M</td>
-										</tr>
-										<tr>
-											<td><a href="javascript:void(0)" class="link text-center">0003</a></td>
-											<td class="text-center">04/09/2019</td>
-											<td class="text-center">10H 45M</td>
-											<td class="text-center">14H 23M</td>
-											<td class="text-center">15H 23M</td>
-											<td class="text-center">19H 45M</td>
-											<td class="text-center">
-												<div class="label label-table label-success">Sem
-													Pendência</div>
-											</td>
-											<td class="text-center">-1H 30M</td>
-										</tr>
-										<tr>
-											<td><a href="javascript:void(0)" class="link text-center">0004</a></td>
-											<td class="text-center">05/09/2019</td>
-											<td class="text-center">10H 45M</td>
-											<td class="text-center">14H 23M</td>
-											<td class="text-center">15H 23M</td>
-											<td class="text-center">19H 45M</td>
-											<td class="text-center">
-												<div class="label label-table label-success">Sem
-													Pendência</div>
-											</td>
-											<td class="text-center">-1H 30M</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+					<div class="col-lg-12">
+						<div class="card card-body">
+							<form>
+								<button class="btn btn-info col-lg-12" type="submit">Registrar</button>
+							</form>
 						</div>
 					</div>
-					<!-- Column -->
 				</div>
+				<!-- [CONTEUDO] -->
 
 				<div class="right-sidebar">
 					<div class="slimscrollright">
 						<div class="rpanel-title">
-							Service Panel 
+							Painel de Configuração
 							<span><i class="ti-close right-side-toggle"></i></span>
 						</div>
 						<div class="r-panel-body">
 							<ul id="themecolors" class="m-t-20">
-								<li><b>With Light sidebar</b></li>
-								<li><a href="javascript:void(0)" data-skin="skin-default" class="default-theme">1</a>
-								</li>
-								<li><a href="javascript:void(0)" data-skin="skin-green" class="green-theme">2</a></li>
-								<li><a href="javascript:void(0)" data-skin="skin-red" class="red-theme">3</a></li>
-								<li><a href="javascript:void(0)" data-skin="skin-blue" class="blue-theme">4</a></li>
-								<li><a href="javascript:void(0)" data-skin="skin-purple" class="purple-theme">5</a></li>
-								<li><a href="javascript:void(0)" data-skin="skin-megna" class="megna-theme">6</a></li>
-								<li class="d-block m-t-30"><b>With Dark sidebar</b></li>
-								<li><a href="javascript:void(0)" data-skin="skin-default-dark"
-										class="default-dark-theme working">7</a></li>
-								<li><a href="javascript:void(0)" data-skin="skin-green-dark"
-										class="green-dark-theme">8</a></li>
-								<li><a href="javascript:void(0)" data-skin="skin-red-dark" class="red-dark-theme">9</a>
-								</li>
-								<li><a href="javascript:void(0)" data-skin="skin-blue-dark"
-										class="blue-dark-theme">10</a></li>
-								<li><a href="javascript:void(0)" data-skin="skin-purple-dark"
-										class="purple-dark-theme">11</a></li>
-								<li><a href="javascript:void(0)" data-skin="skin-megna-dark"
-										class="megna-dark-theme ">12</a></li>
-							</ul>
-							<ul class="m-t-20 chatonline">
-								<li><b>Chat option</b></li>
-								<li><a href="javascript:void(0)"><img src="../module/assets/images/users/1.jpg"
-											alt="user-img" class="img-circle"> <span>Varun Dhavan <small
-												class="text-success">online</small></span></a></li>
-								<li><a href="javascript:void(0)"><img src="../module/assets/images/users/2.jpg"
-											alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small
-												class="text-warning">Away</small></span></a></li>
-								<li><a href="javascript:void(0)"><img src="../module/assets/images/users/3.jpg"
-											alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small
-												class="text-danger">Busy</small></span></a></li>
-								<li><a href="javascript:void(0)"><img src="../module/assets/images/users/4.jpg"
-											alt="user-img" class="img-circle"> <span>Arijit Sinh <small
-												class="text-muted">Offline</small></span></a></li>
-								<li><a href="javascript:void(0)"><img src="../module/assets/images/users/5.jpg"
-											alt="user-img" class="img-circle"> <span>Govinda Star <small
-												class="text-success">online</small></span></a></li>
-								<li><a href="javascript:void(0)"><img src="../module/assets/images/users/6.jpg"
-											alt="user-img" class="img-circle"> <span>John Abraham<small
-												class="text-success">online</small></span></a></li>
-								<li><a href="javascript:void(0)"><img src="../module/assets/images/users/7.jpg"
-											alt="user-img" class="img-circle"> <span>Hritik Roshan<small
-												class="text-success">online</small></span></a></li>
-								<li><a href="javascript:void(0)"><img src="../module/assets/images/users/8.jpg"
-											alt="user-img" class="img-circle"> <span>Pwandeep rajan <small
-												class="text-success">online</small></span></a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 
