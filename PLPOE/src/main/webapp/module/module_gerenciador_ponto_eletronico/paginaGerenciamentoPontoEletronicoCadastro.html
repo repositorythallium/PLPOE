@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="gerenciadorPontoEletronicoModule">
 
 <head>
 	<meta charset="utf-8" />
@@ -14,7 +14,7 @@
 	<title>PLPOE | Plataforma de Lançamento de Ponto Eletrônico</title>
 </head>
 
-<body class="fixed-layout skin-blue-dark">
+<body ng-controller="gerenciadorPontoEletronicoController" class="fixed-layout skin-blue-dark">
 
 	<div class="preloader">
 		<div class="loader">
@@ -391,7 +391,7 @@
 		
 			<div class="d-flex no-block nav-text-box align-items-center">
 				<span>
-					<img src="../../module/assets/images/plpoe_logo.png" alt="PLPOE" width="180px;">
+					<img src="../../module/assets/images/plpoe_logo.png" alt="PLPOE" width="160px;">
 				</span> 
 				<a class="nav-lock waves-effect waves-dark ml-auto hidden-md-down" href="javascript:void(0)">
 					<i class="mdi mdi-toggle-switch"></i>
@@ -452,7 +452,7 @@
 			<div class="container-fluid">
 				<div class="row page-titles">
 					<div class="col-md-5 align-self-center">
-						<h4 class="text-themecolor">Registro de Ponto Eletrônico</h4>
+						<h4 class="text-themecolor"> {{moduleName}} </h4>
 					</div>
 					<div class="col-md-7 align-self-center text-right">
 						<div class="d-flex justify-content-end align-items-center">
@@ -525,7 +525,10 @@
 		<footer class="footer text-center text-info position-fixed"> PLPOE | Plataforma de Lançamento de Ponto Eletrônico © 2019 </footer>
 
 	</div>
-
+	
+	<script src="../../module/assets/node_modules/angularjs/angularjs_full_v1.6.0/angular.min.js"></script>
+	<script src="module_gerenciador_ponto_eletronico_controller/gerenciamentoPontoEletronicoController.js"></script>
+	
 	<script src="../../module/assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
 	<script src="../../module/assets/node_modules/popper/popper.min.js"></script>
 	<script src="../../module/assets/node_modules/bootstrap/js/bootstrap.min.js"></script>
