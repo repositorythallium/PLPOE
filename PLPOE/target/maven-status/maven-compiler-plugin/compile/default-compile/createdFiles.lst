@@ -1,5 +1,5 @@
-br/plataformalancamento/pontoeletronico/entity/PontoEletronicoEntityt.class
 br/plataformalancamento/pontoeletronico/entity/PontoEletronicoRepository.class
+br/plataformalancamento/pontoeletronico/entity/PontoEletronicoEntity.class
 br/plataformalancamento/pontoeletronico/entity/PontoEletronicoService.class
 br/plataformalancamento/pontoeletronico/application/PlataformaLancamentoApplication.class
 br/plataformalancamento/pontoeletronico/resource/PontoEletronicoResource.class
