@@ -4,7 +4,7 @@ import javax.ws.rs.ApplicationPath;
 
 import org.glassfish.jersey.server.ResourceConfig;
 
-@ApplicationPath("br.plataformalancamento.pontoeletronico.resource")
+@ApplicationPath("rest")
 public class PlataformaLancamentoApplication extends ResourceConfig {
 
 	private static final String PACKAGE_RESOURCE = "br.plataformalancamento.pontoeletronico.resource";
