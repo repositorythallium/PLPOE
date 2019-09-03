@@ -1,20 +1,39 @@
 package br.plataformalancamento.pontoeletronico.entity;
 
 import java.io.Serializable;
+import java.sql.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import br.plataformalancamento.pontoeletronico.utility.ConstantesUtility;
+
+@Entity
+@Table(name = ConstantesUtility.TABLE_PONTO_ELETRONICO_NAME)
 public class PontoEletronicoEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@Column(name = "CODIGO")
 	private Long codigo;
 	
-	private String primeiraEntrada;
+	@Column(name = "PRIMEIRA_ENTRADA")
+	private Date primeiraEntrada;
 	
-	private String primeiraSaida;
+	@Column(name = "PRIMEIRA_SAIDA")
+	private Date primeiraSaida;
 	
-	private String segundaEntrada;
+	@Column(name = "SEGUNDA_ENTRADA")
+	private Date segundaEntrada;
 	
-	private String segundaSaida;
+	@Column(name = "SEGUNDA_SAIDA")
+	private Date segundaSaida;
+	
+	@Column(name = "OBSERVACAO")
+	private String observacao;
 	
 	public PontoEletronicoEntity() { }
 
@@ -26,40 +45,78 @@ public class PontoEletronicoEntity implements Serializable {
 		this.codigo = codigo;
 	}
 
-	public String getPrimeiraEntrada() {
+	public Date getPrimeiraEntrada() {
 		return primeiraEntrada;
 	}
 
-	public void setPrimeiraEntrada(String primeiraEntrada) {
+	public void setPrimeiraEntrada(Date primeiraEntrada) {
 		this.primeiraEntrada = primeiraEntrada;
 	}
 
-	public String getPrimeiraSaida() {
+	public Date getPrimeiraSaida() {
 		return primeiraSaida;
 	}
 
-	public void setPrimeiraSaida(String primeiraSaida) {
+	public void setPrimeiraSaida(Date primeiraSaida) {
 		this.primeiraSaida = primeiraSaida;
 	}
 
-	public String getSegundaEntrada() {
+	public Date getSegundaEntrada() {
 		return segundaEntrada;
 	}
 
-	public void setSegundaEntrada(String segundaEntrada) {
+	public void setSegundaEntrada(Date segundaEntrada) {
 		this.segundaEntrada = segundaEntrada;
 	}
 
-	public String getSegundaSaida() {
+	public Date getSegundaSaida() {
 		return segundaSaida;
 	}
 
-	public void setSegundaSaida(String segundaSaida) {
+	public void setSegundaSaida(Date segundaSaida) {
 		this.segundaSaida = segundaSaida;
+	}
+
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		PontoEletronicoEntity other = (PontoEletronicoEntity) obj;
+		if (codigo == null) {
+			if (other.codigo != null)
+				return false;
+		} else if (!codigo.equals(other.codigo))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "PontoEletronicoEntity [codigo=" + codigo + "]";
 	}
 	
 }

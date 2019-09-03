@@ -4,16 +4,16 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 	
 	var NAME_API_PONTO_ELETRONICO = "http://localhost:8080/PLPOE-1.0.0.1-SNAPSHOT/rest/pontoEletronicoResource";
 	
-	$scope.moduleName = "Registro de Ponto Eletrônico";
-	
 	$scope.gerenciadorPontoEletronicoModel = {};
 	
-	function incializador() { };
+	function incializador() {
+		$scope.moduleName = "Registro de Ponto Eletrônico";
+	};
 	
 	$scope.save = function(gerenciadorPontoEletronicoModel) {
 		console.log(gerenciadorPontoEletronicoModel);
 		$http.get(NAME_API_PONTO_ELETRONICO);
-		delete gerenciadorPontoEletronicoModel;
+		delete $scope.gerenciadorPontoEletronicoModel;
 	};
 	
 	$scope.update = function(gerenciadorPontoEletronicoModel) {
