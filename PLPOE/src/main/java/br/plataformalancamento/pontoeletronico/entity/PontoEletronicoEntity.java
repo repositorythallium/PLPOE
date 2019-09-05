@@ -1,10 +1,11 @@
 package br.plataformalancamento.pontoeletronico.entity;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -17,6 +18,7 @@ public class PontoEletronicoEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
+	@GeneratedValue
 	@Column(name = "CODIGO")
 	private Long codigo;
 	

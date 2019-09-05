@@ -8,6 +8,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import br.plataformalancamento.pontoeletronico.entity.PontoEletronicoEntity;
+import br.plataformalancamento.pontoeletronico.service.PontoEletronicoService;
 import br.plataformalancamento.pontoeletronico.utility.ConstantesUtility;
 
 @Path("/pontoEletronicoResource")
@@ -17,9 +19,24 @@ public class PontoEletronicoResource implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
+	private PontoEletronicoService pontoEletronicoService;
+	
+	public PontoEletronicoResource() {
+		this.pontoEletronicoService = new PontoEletronicoService();
+	}
+	
 	@GET
-	public String save() {
+	public String persist(PontoEletronicoEntity pontoEletronicoEntity) {
+		this.pontoEletronicoService.persist(pontoEletronicoEntity);
 		return ConstantesUtility.MENSAGEM_SUCESSO;
+	}
+
+	public PontoEletronicoService getPontoEletronicoService() {
+		return pontoEletronicoService;
+	}
+
+	public void setPontoEletronicoService(PontoEletronicoService pontoEletronicoService) {
+		this.pontoEletronicoService = pontoEletronicoService;
 	}
 	
 }
