@@ -30,11 +30,11 @@ public class PontoEletronicoService implements Serializable {
 	}
 	
 	public List<PontoEletronicoEntity> findAll() {
-		return null;
+		return pontoEletronicoRepository.findAll();
 	}
 	
-	public PontoEletronicoEntity findOne(Long codigoPontoEletronico) {
-		return null;
+	public PontoEletronicoEntity findOne(PontoEletronicoEntity pontoEletronicoEntity) {
+		return pontoEletronicoRepository.findOne(pontoEletronicoEntity.getCodigo());
 	}
 	
 	public PontoEletronicoEntity findOne(Date dataRegistroPontoEletronico) {

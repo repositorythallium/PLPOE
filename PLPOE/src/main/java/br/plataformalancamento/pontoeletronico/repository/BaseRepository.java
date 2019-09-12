@@ -5,10 +5,12 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 
 import org.jboss.logging.Logger;
 
 import br.plataformalancamento.pontoeletronico.connection.EntityManagerConnection;
+import br.plataformalancamento.pontoeletronico.entity.PontoEletronicoEntity;
 
 public class BaseRepository<T> implements Serializable {
 
@@ -27,6 +29,17 @@ public class BaseRepository<T> implements Serializable {
 		this.entityTransaction = entityManager.getTransaction();
 	}
 	
+	@SuppressWarnings("unchecked")
+	public T findOne(Long codigoPontoEletronico) {
+		return (T) entityManager.find(PontoEletronicoEntity.class, codigoPontoEletronico);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<T> findAll(Class<T> object) {
+		Query query = entityManager.createQuery("FROM " + object.getSimpleName());
+		return query.getResultList();
+	}
+	
 	public T persist(T object) {
 		getBeginTransaction();
 			getEntityManager().persist(object);
@@ -39,6 +52,19 @@ public class BaseRepository<T> implements Serializable {
 		for(T t : objectList) {
 			getEntityManager().persist(t);
 		}
+		getCommitTransaction();
+	}
+	
+	public T merge(T object) {
+		getBeginTransaction();
+			entityManager.merge(object);
+		getCommitTransaction();
+		return object;
+	}
+	
+	public void remove(Long codigoObject) {
+		getBeginTransaction();
+			entityManager.remove(this.findOne(codigoObject));
 		getCommitTransaction();
 	}
 	

@@ -6,13 +6,15 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 	
 	$scope.gerenciadorPontoEletronicoModel = {};
 	
+	$scope.gerenciadorPontoEletronicoList = [];
+	
 	function incializador() {
 		$scope.moduleName = "Registro de Ponto Eletrônico";
 	};
 	
 	$scope.save = function(gerenciadorPontoEletronicoModel) {
 		console.log(gerenciadorPontoEletronicoModel);
-		$http.get(NAME_API_PONTO_ELETRONICO);
+		$http.post(NAME_API_PONTO_ELETRONICO);
 		delete $scope.gerenciadorPontoEletronicoModel;
 	};
 	

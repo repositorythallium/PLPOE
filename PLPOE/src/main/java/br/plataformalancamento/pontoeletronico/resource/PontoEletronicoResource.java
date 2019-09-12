@@ -1,9 +1,11 @@
 package br.plataformalancamento.pontoeletronico.resource;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -25,10 +27,19 @@ public class PontoEletronicoResource implements Serializable {
 		this.pontoEletronicoService = new PontoEletronicoService();
 	}
 	
-	@GET
+	@POST
 	public String persist(PontoEletronicoEntity pontoEletronicoEntity) {
 		this.pontoEletronicoService.persist(pontoEletronicoEntity);
 		return ConstantesUtility.MENSAGEM_SUCESSO;
+	}
+	
+	public PontoEletronicoEntity findOne(PontoEletronicoEntity pontoEletronicoEntity) {
+		return this.pontoEletronicoService.findOne(pontoEletronicoEntity);
+	}
+	
+	@GET
+	public List<PontoEletronicoEntity> findAll() {
+		return this.pontoEletronicoService.findAll();
 	}
 
 	public PontoEletronicoService getPontoEletronicoService() {

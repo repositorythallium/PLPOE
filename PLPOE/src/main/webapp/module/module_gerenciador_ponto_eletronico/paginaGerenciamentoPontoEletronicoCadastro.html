@@ -471,20 +471,20 @@
 						<div class="card card-body">
 							<form class="row row-space-10 m-b-10">
 								<div class="form-group col-md-6">
-									<label for="entrada_i" class="text-white">Entrada I <span class="text-danger">*</span> </label> 
-									<input id="entrada_i" name="entrada_i" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.entrada_i" class="form-control text-center" />
+									<label for="dataHoraPrimeiraEntrada" class="text-white">Entrada I <span class="text-danger">*</span> </label> 
+									<input id="dataHoraPrimeiraEntrada" name="dataHoraPrimeiraEntrada" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.dataHoraPrimeiraEntrada" class="form-control text-center" />
 								</div>
 								<div class="form-group col-md-6">
-									<label for="saida_i" class="text-white">Saída I <span class="text-danger">*</span> </label> 
-									<input id="saida_i" name="saida_i" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.saida_i" class="form-control text-center" />
+									<label for="dataHoraPrimeiraSaida" class="text-white">Saída I <span class="text-danger">*</span> </label> 
+									<input id="dataHoraPrimeiraSaida" name="dataHoraPrimeiraSaida" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.dataHoraPrimeiraSaida" class="form-control text-center" />
 								</div>
 								<div class="form-group col-md-6">
-									<label for="entrada_ii" class="text-white">Entrada II <span class="text-danger">*</span> </label> 
-									<input id="entrada_ii" name="entrada_ii" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.entrada_ii" class="form-control text-center" />
+									<label for="dataHoraSegundaEntrada" class="text-white">Entrada II <span class="text-danger">*</span> </label> 
+									<input id="dataHoraSegundaEntrada" name="dataHoraSegundaEntrada" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.dataHoraSegundaEntrada" class="form-control text-center" />
 								</div>
 								<div class="form-group col-md-6">
-									<label for="saida_ii" class="text-white">Saída II <span class="text-danger">*</span> </label> 
-									<input id="saida_ii" name="saida_ii" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.saida_ii" class="form-control text-center" />
+									<label for="dataHoraSegundaSaida" class="text-white">Saída II <span class="text-danger">*</span> </label> 
+									<input id="dataHoraSegundaSaida" name="dataHoraSegundaSaida" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.dataHoraSegundaSaida" class="form-control text-center" />
 								</div>
 							</form>
 						</div>
@@ -495,10 +495,44 @@
 					<div class="col-lg-12">
 						<div class="card card-body">
 							<form>
-								<button type="submit" ng-click="save(gerenciadorPontoEletronicoModel)" class="btn btn-info col-lg-12">Registrar Registro de Ponto Eletrônico</button>
+								<button type="submit" ng-click="save(gerenciadorPontoEletronicoModel)" class="btn btn-info col-lg-12">Registrar Ponto Eletrônico</button>
 							</form>
 						</div>
 					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Registro de Ponto Eletrônico</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Código</th>
+                                                <th>Primeira Entrada</th>
+                                                <th>Primeira Saída</th>
+                                                <th>Segunda Entrada</th>
+                                                <th>Segunda Saída</th>
+                                                <th>Situação</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody ng-repeat="pontoEletronicoResult in $scope.gerenciadorPontoEletronicoList">
+                                            <tr>
+                                                <td>{{pontoEletronicoResult.codigo}}</td>
+                                                <td>{{pontoEletronicoResult.dataHoraPrimeiraEntrada}}</td>
+                                                <td>{{pontoEletronicoResult.dataHoraPrimeiraSaida}}</td>
+                                                <td>{{pontoEletronicoResult.dataHoraSegundaEntrada}}</td>
+                                                <td>{{pontoEletronicoResult.dataHoraSegundaSaida}}</td>
+                                                <td><span class="label label-info">Registrado com Sucesso</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 				</div>
 				<!-- [CONTEUDO] -->
 

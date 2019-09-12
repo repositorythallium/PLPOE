@@ -9,12 +9,15 @@ public class PontoEletronicoRepository implements Serializable, BaseInterfaceRep
 
 	private static final long serialVersionUID = 1L;
 	
-	public PontoEletronicoRepository() { }
+	private BaseRepository<PontoEletronicoEntity> baseRepositoryPontoEletronicoEntity;
+	
+	public PontoEletronicoRepository() { 
+		baseRepositoryPontoEletronicoEntity = new BaseRepository<PontoEletronicoEntity>();
+	}
 
 	@Override
 	public PontoEletronicoEntity persist(PontoEletronicoEntity entity) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.baseRepositoryPontoEletronicoEntity.persist(entity);
 	}
 
 	@Override
@@ -29,16 +32,13 @@ public class PontoEletronicoRepository implements Serializable, BaseInterfaceRep
 		return null;
 	}
 
-	@Override
 	public List<PontoEletronicoEntity> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return baseRepositoryPontoEletronicoEntity.findAll(PontoEletronicoEntity.class);
 	}
 
 	@Override
-	public PontoEletronicoEntity findOne(Long codigo) {
-		// TODO Auto-generated method stub
-		return null;
+	public PontoEletronicoEntity findOne(Long codigoPontoEletronico) {
+		return baseRepositoryPontoEletronicoEntity.findOne(codigoPontoEletronico);
 	}
 
 	@Override
