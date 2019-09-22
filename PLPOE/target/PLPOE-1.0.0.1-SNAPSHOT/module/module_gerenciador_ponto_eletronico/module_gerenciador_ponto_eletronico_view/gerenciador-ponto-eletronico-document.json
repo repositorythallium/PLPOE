@@ -1,0 +1,58 @@
+[
+    {
+        "codigo": 1,
+        "primeiraEntrada": 1567654375118,
+        "primeiraSaida": 1567654375118,
+        "segundaEntrada": 1567654375118,
+        "segundaSaida": 1567654375118,
+        "observacao": ""
+    },
+    {
+        "codigo": 2,
+        "primeiraEntrada": 1567654414908,
+        "primeiraSaida": 1567654414908,
+        "segundaEntrada": 1567654414908,
+        "segundaSaida": 1567654414908,
+        "observacao": ""
+    },
+    {
+        "codigo": 3,
+        "primeiraEntrada": 1567654418875,
+        "primeiraSaida": 1567654418875,
+        "segundaEntrada": 1567654418875,
+        "segundaSaida": 1567654418875,
+        "observacao": ""
+    },
+    {
+        "codigo": 4,
+        "primeiraEntrada": 1567904041735,
+        "primeiraSaida": 1567904041735,
+        "segundaEntrada": 1567904041735,
+        "segundaSaida": 1567904041735,
+        "observacao": ""
+    },
+    {
+        "codigo": 5,
+        "primeiraEntrada": 1567904420626,
+        "primeiraSaida": 1567904420626,
+        "segundaEntrada": 1567904420626,
+        "segundaSaida": 1567904420626,
+        "observacao": ""
+    },
+    {
+        "codigo": 6,
+        "primeiraEntrada": 1567908215838,
+        "primeiraSaida": 1567908215838,
+        "segundaEntrada": 1567908215838,
+        "segundaSaida": 1567908215838,
+        "observacao": ""
+    },
+    {
+        "codigo": 7,
+        "primeiraEntrada": null,
+        "primeiraSaida": null,
+        "segundaEntrada": null,
+        "segundaSaida": null,
+        "observacao": "[CARGA_TESTE]"
+    }
+]

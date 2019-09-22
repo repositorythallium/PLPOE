@@ -356,7 +356,7 @@
 											<img src="../../module/assets/images/users/1.jpg" alt="user" class="img-circle" width="60">
 										</div>
 										<div class="m-l-10">
-											<h4 class="m-b-0">Steave Jobs</h4>
+											<h4 class="m-b-0">José Quintinn</h4>
 											<p class=" m-b-0">
 												<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="67110615120927000a060e0b4904080a">[email&#160;protected]</a>
 											</p>
@@ -422,8 +422,9 @@
 								<span class="hide-menu">Lançamentos</span>
 							</a>
 							<ul aria-expanded="false" class="collapse">
-								<li><a href="paginaGerenciamentoPontoEletronicoCadastro.html">Registrar Ponto Eletrônico<i class="ti-calendar"></i></a></li>
-								<li><a href="app-chat.html">Correção de Horas <i class="ti-comment"></i></a></li>
+								<li><a href="paginaGerenciamentoPontoEletronicoCadastro.html">Histórico de Registros<i class="fa fa-clock"></i></a></li>
+								<li><a href="paginaGerenciamentoPontoEletronicoCadastro.html">Registrar Ponto Eletrônico<i class="fa fa-clock"></i></a></li>
+								<li><a href="#">Ajustes de Registro de Ponto <i class="ti-comment"></i></a></li>
 								</li>
 							</ul>
 						</li>
@@ -542,6 +543,9 @@
                                                 <td>{{pontoEletronicoResult.dataHoraSegundaEntrada}}</td>
                                                 <td>{{pontoEletronicoResult.dataHoraSegundaSaida}}</td>
                                                 <td class="text-center">
+                                                	<div class="btn-group">
+					                                	<button type="button" ng-click="" class="btn btn-primary btn-circle"><i class="ti ti-more"></i></button>
+					                                </div>
                                                 	<div class="btn-group">
 					                                   <button type="button" ng-click="update(pontoEletronicoResult)" class="btn btn-info btn-circle"><i class="fa fa-edit"></i></button>
 					                                </div>

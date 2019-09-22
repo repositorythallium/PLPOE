@@ -5,14 +5,63 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 	var NAME_API_PONTO_ELETRONICO = "http://localhost:8080/PLPOE-1.0.0.1-SNAPSHOT/rest/pontoEletronicoResource";
 	
 	$scope.gerenciadorPontoEletronicoModel = {
-		dataHoraPrimeiraEntrada: null,
-		dataHoraPrimeiraSaida: null,
-		dataHoraSegundaEntrada: null,
-		dataHoraSegundaSaida: null,
+		dataHoradataHoraPrimeiraEntrada: null,
+		dataHoradataHoraPrimeiraSaida: null,
+		dataHoradataHoraSegundaEntrada: null,
+		dataHoradataHoraSegundaSaida: null,
 		dataHoraAtual: null,
 	};
 	
-	$scope.gerenciadorPontoEletronicoList = [];
+	$scope.gerenciadorPontoEletronicoList = [
+		{
+	        "codigo": 1,
+	        "dataHoraPrimeiraEntrada": "09:45",
+	        "dataHoraPrimeiraSaida": "11:01",
+	        "dataHoraSegundaEntrada": "11:01",
+	        "dataHoraSegundaSaida": "11:01",
+	        "observacao": ""
+	    },
+	    {
+	        "codigo": 2,
+	        "dataHoraPrimeiraEntrada": "08:16",
+	        "dataHoraPrimeiraSaida": "08:16",
+	        "dataHoraSegundaEntrada": "08:16",
+	        "dataHoraSegundaSaida": "08:16",
+	        "observacao": ""
+	    },
+	    {
+	        "codigo": 3,
+	        "dataHoraPrimeiraEntrada": "07:21",
+	        "dataHoraPrimeiraSaida": "07:21",
+	        "dataHoraSegundaEntrada": "07:21",
+	        "dataHoraSegundaSaida": "07:21",
+	        "observacao": ""
+	    },
+	    {
+	        "codigo": 4,
+	        "dataHoraPrimeiraEntrada": "08:47",
+	        "dataHoraPrimeiraSaida": "08:47",
+	        "dataHoraSegundaEntrada": "08:47",
+	        "dataHoraSegundaSaida": "08:47",
+	        "observacao": ""
+	    },
+	    {
+	        "codigo": 5,
+	        "dataHoraPrimeiraEntrada": "07:7",
+	        "dataHoraPrimeiraSaida": "11:10",
+	        "dataHoraSegundaEntrada": "11:10",
+	        "dataHoraSegundaSaida": "11:10",
+	        "observacao": ""
+	    },
+	    {
+	        "codigo": 6,
+	        "dataHoraPrimeiraEntrada": "09:56",
+	        "dataHoraPrimeiraSaida": "09:56",
+	        "dataHoraSegundaEntrada": "09:56",
+	        "dataHoraSegundaSaida": "09:56",
+	        "observacao": ""
+	    },
+	];
 	
 	function incializador() {
 //		$scope.moduleName = "Registro de Ponto Eletrônico";
