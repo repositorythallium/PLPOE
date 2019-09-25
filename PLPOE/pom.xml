@@ -1,17 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-		 					 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>br.com.plataformalancamentopontoeletronico</groupId>
-  <artifactId>PLPOE</artifactId>
-  <version>1.0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <name>PLPOE</name>
-  <description>Sistema de Gestão de Lançamentos de Registros de Ponto Eletrônico (REP)</description>
-  
-  <properties>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.plataformalancamento.pontoeletronico</groupId>
+	<artifactId>PLPOE</artifactId>
+	<version>1.0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>PLPOE - Plataforma de Lançamento Ponto Eletrônico</name>
+	<description>Sistema de Gestão de controle de Lançamentos de Registros de Ponto Eletrônico (REP)</description>
+
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -27,63 +26,63 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	<dependencies>
-		
-		<dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-web-api</artifactId>
-			<version>7.0</version>
-			<scope>provided</scope>
-		</dependency>
-	
-		<dependency>
-			<groupId>org.glassfish.jersey.containers</groupId>
-			<artifactId>jersey-container-servlet</artifactId>
-			<version>2.23</version>
-		</dependency>
-	
-		<dependency>
-			<groupId>org.glassfish.jersey.media</groupId>
-			<artifactId>jersey-media-json-jackson</artifactId>
-			<version>2.23</version>
-			<scope>runtime</scope>
-		</dependency>
-	
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>5.1.0.Final</version>
-			<scope>provided</scope>
-		</dependency>
-	
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-validator</artifactId>
-			<version>5.2.4.Final</version>
-			<scope>provided</scope>
-		</dependency>
-	
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>5.1.0.Final</version>
-			<scope>provided</scope>
-		</dependency>
-	
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-ehcache</artifactId>
-			<version>5.1.0.Final</version>
-			<scope>provided</scope>
-		</dependency>
-	
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>42.2.4</version>
-		</dependency>
-		
-	</dependencies>
+  
+  <dependencies>
+  
+	<dependency>
+		<groupId>javax</groupId>
+		<artifactId>javaee-web-api</artifactId>
+		<version>7.0</version>
+		<scope>provided</scope>
+	</dependency>
+
+	<dependency>
+		<groupId>org.glassfish.jersey.containers</groupId>
+		<artifactId>jersey-container-servlet</artifactId>
+		<version>2.23</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.glassfish.jersey.media</groupId>
+		<artifactId>jersey-media-json-jackson</artifactId>
+		<version>2.23</version>
+		<scope>runtime</scope>
+	</dependency>
+
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>5.1.0.Final</version>
+		<scope>provided</scope>
+	</dependency>
+
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-validator</artifactId>
+		<version>5.2.4.Final</version>
+		<scope>provided</scope>
+	</dependency>
+
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-entitymanager</artifactId>
+		<version>5.1.0.Final</version>
+		<scope>provided</scope>
+	</dependency>
+
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-ehcache</artifactId>
+		<version>5.1.0.Final</version>
+		<scope>provided</scope>
+	</dependency>
+
+	<dependency>
+		<groupId>org.postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+		<version>42.2.4</version>
+	</dependency>
+  
+  </dependencies>
 
 </project>
