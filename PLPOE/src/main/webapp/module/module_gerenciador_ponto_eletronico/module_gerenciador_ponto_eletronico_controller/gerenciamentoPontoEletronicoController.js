@@ -4,17 +4,34 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 	
 	var NAME_API_PONTO_ELETRONICO = "http://localhost:8080/PLPOE-1.0.0.1-SNAPSHOT/rest/pontoEletronicoResource";
 	
+	$scope.mesReferenciaList = [
+		{ "mesReferencia": "Janeiro de 2019" },
+		{ "mesReferencia": "Fevereiro de 2019" },
+		{ "mesReferencia": "Março de 2019" },
+		{ "mesReferencia": "Abril de 2019" },
+		{ "mesReferencia": "Maio de 2019" },
+		{ "mesReferencia": "Junho de 2019" },
+		{ "mesReferencia": "Julho de 2019" },
+		{ "mesReferencia": "Agosto de 2019" },
+		{ "mesReferencia": "Setembro de 2019" },
+		{ "mesReferencia": "Outubro de 2019" },
+		{ "mesReferencia": "Novembro de 2019" },
+		{ "mesReferencia": "Dezembro de 2019" },
+	];
+	
 	$scope.gerenciadorPontoEletronicoModel = {
 		dataHoradataHoraPrimeiraEntrada: null,
 		dataHoradataHoraPrimeiraSaida: null,
 		dataHoradataHoraSegundaEntrada: null,
 		dataHoradataHoraSegundaSaida: null,
 		dataHoraAtual: null,
+		mesReferencia: null,
 	};
 	
 	$scope.gerenciadorPontoEletronicoList = [
 		{
 	        "codigo": 1,
+	        "dataHoraAtual": "15/09/2019",
 	        "dataHoraPrimeiraEntrada": "09:45",
 	        "dataHoraPrimeiraSaida": "11:01",
 	        "dataHoraSegundaEntrada": "11:01",
@@ -23,6 +40,7 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 	    },
 	    {
 	        "codigo": 2,
+	        "dataHoraAtual": "16/09/2019",
 	        "dataHoraPrimeiraEntrada": "08:16",
 	        "dataHoraPrimeiraSaida": "08:16",
 	        "dataHoraSegundaEntrada": "08:16",
@@ -31,6 +49,7 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 	    },
 	    {
 	        "codigo": 3,
+	        "dataHoraAtual": "17/09/2019",
 	        "dataHoraPrimeiraEntrada": "07:21",
 	        "dataHoraPrimeiraSaida": "07:21",
 	        "dataHoraSegundaEntrada": "07:21",
@@ -39,6 +58,7 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 	    },
 	    {
 	        "codigo": 4,
+	        "dataHoraAtual": "18/09/2019",
 	        "dataHoraPrimeiraEntrada": "08:47",
 	        "dataHoraPrimeiraSaida": "08:47",
 	        "dataHoraSegundaEntrada": "08:47",
@@ -47,6 +67,7 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 	    },
 	    {
 	        "codigo": 5,
+	        "dataHoraAtual": "19/09/2019",
 	        "dataHoraPrimeiraEntrada": "07:7",
 	        "dataHoraPrimeiraSaida": "11:10",
 	        "dataHoraSegundaEntrada": "11:10",
@@ -55,6 +76,7 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 	    },
 	    {
 	        "codigo": 6,
+	        "dataHoraAtual": "20/09/2019",
 	        "dataHoraPrimeiraEntrada": "09:56",
 	        "dataHoraPrimeiraSaida": "09:56",
 	        "dataHoraSegundaEntrada": "09:56",

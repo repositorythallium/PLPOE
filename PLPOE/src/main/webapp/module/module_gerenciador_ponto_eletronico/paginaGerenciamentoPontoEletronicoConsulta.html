@@ -495,7 +495,12 @@
 										</div>
 									</div>
 									<div class="float-right search">
-										<input class="form-control" type="text" placeholder="Pesquisar">
+										<input id="pesquisar" type="text" ng-model="pesquisar" placeholder="Pesquisar" class="form-control">
+									</div>
+									<div class="form-group float-left">
+										<select id="referencia" name="referencia" ng-model="gerenciadorPontoEletronicoModel.mesReferencia" ng-options="mesReferenciaResult.mesReferencia for mesReferenciaResult in mesReferenciaList track by mesReferenciaResult.codigo" class="form-control"> 
+											
+										</select>
 									</div>
 								</div>
 
@@ -519,7 +524,7 @@
                                                 <th class="text-center">Ação</th>
                                             </tr>
                                         </thead>
-                                        <tbody ng-repeat="pontoEletronicoResult in gerenciadorPontoEletronicoList | filter:search">
+                                        <tbody ng-repeat="pontoEletronicoResult in gerenciadorPontoEletronicoList | filter:pesquisar">
                                             <tr>
                                                 <td>{{pontoEletronicoResult.codigo}}</td>
                                                 <td>{{pontoEletronicoResult.dataHoraAtual}}</td>
