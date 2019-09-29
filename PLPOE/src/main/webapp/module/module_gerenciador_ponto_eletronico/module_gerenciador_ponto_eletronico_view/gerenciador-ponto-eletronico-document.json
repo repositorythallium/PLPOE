@@ -1,56 +1,58 @@
-[
-    {
-        "codigo": 1,
-        "dataHoraAtual": "15/09/2019",
-        "dataHoraPrimeiraEntrada": "09:45",
-        "dataHoraPrimeiraSaida": "11:01",
-        "dataHoraSegundaEntrada": "11:01",
-        "dataHoraSegundaSaida": "11:01",
-        "observacao": ""
-    },
-    {
-        "codigo": 2,
-        "dataHoraAtual": "16/09/2019",
-        "dataHoraPrimeiraEntrada": "08:16",
-        "dataHoraPrimeiraSaida": "08:16",
-        "dataHoraSegundaEntrada": "08:16",
-        "dataHoraSegundaSaida": "08:16",
-        "observacao": ""
-    },
-    {
-        "codigo": 3,
-        "dataHoraAtual": "17/09/2019",
-        "dataHoraPrimeiraEntrada": "07:21",
-        "dataHoraPrimeiraSaida": "07:21",
-        "dataHoraSegundaEntrada": "07:21",
-        "dataHoraSegundaSaida": "07:21",
-        "observacao": ""
-    },
-    {
-        "codigo": 4,
-        "dataHoraAtual": "18/09/2019",
-        "dataHoraPrimeiraEntrada": "08:47",
-        "dataHoraPrimeiraSaida": "08:47",
-        "dataHoraSegundaEntrada": "08:47",
-        "dataHoraSegundaSaida": "08:47",
-        "observacao": ""
-    },
-    {
-        "codigo": 5,
-        "dataHoraAtual": "19/09/2019",
-        "dataHoraPrimeiraEntrada": "07:7",
-        "dataHoraPrimeiraSaida": "11:10",
-        "dataHoraSegundaEntrada": "11:10",
-        "dataHoraSegundaSaida": "11:10",
-        "observacao": ""
-    },
-    {
-        "codigo": 6,
-        "dataHoraAtual": "20/09/2019",
-        "dataHoraPrimeiraEntrada": "09:56",
-        "dataHoraPrimeiraSaida": "09:56",
-        "dataHoraSegundaEntrada": "09:56",
-        "dataHoraSegundaSaida": "09:56",
-        "observacao": ""
-    },
-]
+{
+	"gerenciadorPontoEletronicoModel": [
+		{
+			"codigo": 1,
+			"dataHoraAtual": "15/09/2019",
+			"dataHoraPrimeiraEntrada": "09:45",
+			"dataHoraPrimeiraSaida": "11:01",
+			"dataHoraSegundaEntrada": "11:01",
+			"dataHoraSegundaSaida": "11:01",
+			"observacao": ""
+		},
+		{
+			"codigo": 2,
+			"dataHoraAtual": "16/09/2019",
+			"dataHoraPrimeiraEntrada": "08:16",
+			"dataHoraPrimeiraSaida": "08:16",
+			"dataHoraSegundaEntrada": "08:16",
+			"dataHoraSegundaSaida": "08:16",
+			"observacao": ""
+		},
+		{
+			"codigo": 3,
+			"dataHoraAtual": "17/09/2019",
+			"dataHoraPrimeiraEntrada": "07:21",
+			"dataHoraPrimeiraSaida": "07:21",
+			"dataHoraSegundaEntrada": "07:21",
+			"dataHoraSegundaSaida": "07:21",
+			"observacao": ""
+		},
+		{
+			"codigo": 4,
+			"dataHoraAtual": "18/09/2019",
+			"dataHoraPrimeiraEntrada": "08:47",
+			"dataHoraPrimeiraSaida": "08:47",
+			"dataHoraSegundaEntrada": "08:47",
+			"dataHoraSegundaSaida": "08:47",
+			"observacao": ""
+		},
+		{
+			"codigo": 5,
+			"dataHoraAtual": "19/09/2019",
+			"dataHoraPrimeiraEntrada": "07:45",
+			"dataHoraPrimeiraSaida": "12:45",
+			"dataHoraSegundaEntrada": "13:45",
+			"dataHoraSegundaSaida": "17:45",
+			"observacao": ""
+		},
+		{
+			"codigo": 6,
+			"dataHoraAtual": "20/09/2019",
+			"dataHoraPrimeiraEntrada": "09:56",
+			"dataHoraPrimeiraSaida": "09:56",
+			"dataHoraSegundaEntrada": "09:56",
+			"dataHoraSegundaSaida": "09:56",
+			"observacao": ""
+		}
+	]
+}

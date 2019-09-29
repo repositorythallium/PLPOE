@@ -4,6 +4,8 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 	
 	var NAME_API_PONTO_ELETRONICO = "http://localhost:8080/PLPOE-1.0.0.1-SNAPSHOT/rest/pontoEletronicoResource";
 	
+	$scope.gerenciadorPontoEletronicoList = [];
+	
 	$scope.mesReferenciaList = [
 		{ "mesReferencia": "Janeiro de 2019" },
 		{ "mesReferencia": "Fevereiro de 2019" },
@@ -28,73 +30,15 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 		mesReferencia: null,
 	};
 	
-	$scope.gerenciadorPontoEletronicoList = [
-		{
-	        "codigo": 1,
-	        "dataHoraAtual": "15/09/2019",
-	        "dataHoraPrimeiraEntrada": "09:45",
-	        "dataHoraPrimeiraSaida": "11:01",
-	        "dataHoraSegundaEntrada": "11:01",
-	        "dataHoraSegundaSaida": "11:01",
-	        "observacao": ""
-	    },
-	    {
-	        "codigo": 2,
-	        "dataHoraAtual": "16/09/2019",
-	        "dataHoraPrimeiraEntrada": "08:16",
-	        "dataHoraPrimeiraSaida": "08:16",
-	        "dataHoraSegundaEntrada": "08:16",
-	        "dataHoraSegundaSaida": "08:16",
-	        "observacao": ""
-	    },
-	    {
-	        "codigo": 3,
-	        "dataHoraAtual": "17/09/2019",
-	        "dataHoraPrimeiraEntrada": "07:21",
-	        "dataHoraPrimeiraSaida": "07:21",
-	        "dataHoraSegundaEntrada": "07:21",
-	        "dataHoraSegundaSaida": "07:21",
-	        "observacao": ""
-	    },
-	    {
-	        "codigo": 4,
-	        "dataHoraAtual": "18/09/2019",
-	        "dataHoraPrimeiraEntrada": "08:47",
-	        "dataHoraPrimeiraSaida": "08:47",
-	        "dataHoraSegundaEntrada": "08:47",
-	        "dataHoraSegundaSaida": "08:47",
-	        "observacao": ""
-	    },
-	    {
-	        "codigo": 5,
-	        "dataHoraAtual": "19/09/2019",
-	        "dataHoraPrimeiraEntrada": "07:7",
-	        "dataHoraPrimeiraSaida": "11:10",
-	        "dataHoraSegundaEntrada": "11:10",
-	        "dataHoraSegundaSaida": "11:10",
-	        "observacao": ""
-	    },
-	    {
-	        "codigo": 6,
-	        "dataHoraAtual": "20/09/2019",
-	        "dataHoraPrimeiraEntrada": "09:56",
-	        "dataHoraPrimeiraSaida": "09:56",
-	        "dataHoraSegundaEntrada": "09:56",
-	        "dataHoraSegundaSaida": "09:56",
-	        "observacao": ""
-	    },
-	];
-	
 	function incializador() {
-//		$scope.moduleName = "Registro de Ponto Eletrônico";
 		$scope.findAll();
+		$scope.findAllArquivoJson();
 	};
 	
 	$scope.save = function(gerenciadorPontoEletronicoModel) {
 		console.log(gerenciadorPontoEletronicoModel);
 		gerenciadorPontoEletronicoModel.dataHoraAtual = $scope.recuperarDataAtualDDMMAAAA();
 		$scope.gerenciadorPontoEletronicoList.push(gerenciadorPontoEletronicoModel);
-//		$http.post(NAME_API_PONTO_ELETRONICO);
 		delete $scope.gerenciadorPontoEletronicoModel;
 	};
 	
@@ -109,32 +53,30 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 	
 	$scope.findAll = function() {
 		console.log($http.get(NAME_API_PONTO_ELETRONICO));
-		// $scope.gerenciadorPontoEletronicoList.push();
+	};
+	
+	$scope.findAllArquivoJson = function() {
+		$http.get("../module_gerenciador_ponto_eletronico/module_gerenciador_ponto_eletronico_view/gerenciador-ponto-eletronico-document.json").then(function(response) {
+			$scope.gerenciadorPontoEletronicoList = response.data.gerenciadorPontoEletronicoModel;
+		});
 	};
 	
 	$scope.findOne = function(gerenciadorPontoEletronicoModel) {
 		
 	};
 	
-	/* 
-		Retornar data atual no Formato DD/MM/AAAA
-	*/
 	$scope.recuperarDataAtualDDMMAAAA = function() {
 		return new Date().getDate() + '/' + (new Date().getMonth()+1) + '/' + new Date().getFullYear();
 	};
 	
-	/* 
-		Retornar data atual no Formato DD/MM/AAAA HH:MM
-	*/
 	$scope.recuperarDataAtualDDMMAAAAHHMM = function() {
 		return new Date().getDate() + '/' + (new Date().getMonth()+1) + '/' + new Date().getFullYear() + ' ' + new Date().getHours() + ':' + new Date().getMinutes();
 	};
 	
-	/*
-	 	Limpar dados do formulario
-	*/
 	$scope.clear = function() {
 		$scope.gerenciadorPontoEletronicoModel = null;
 	};
+	
+	incializador();
 	
 });
