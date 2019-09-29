@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="gerenciadorPontoEletronicoModule">
+<html lang="en" ng-app="gerenciadorPontoEletronicoModelModule">
 
 <head>
 	<meta charset="utf-8" />
@@ -14,7 +14,7 @@
 	<title>PLPOE | Plataforma de Lançamento de Ponto Eletrônico</title>
 </head>
 
-<body ng-controller="gerenciadorPontoEletronicoController" class="fixed-layout skin-blue-dark">
+<body ng-controller="gerenciadorPontoEletronicoModelController" class="fixed-layout skin-blue-dark">
 
 	<div class="preloader">
 		<div class="loader">
@@ -289,7 +289,7 @@
 										</div>
 									</li>
 									<li class="col-lg-3  m-b-30">
-										<h4 class="m-b-20">CONTACT US</h4> <!-- Contact -->
+										<h4 class="m-b-20">CONTACT US</h4>
 										<form>
 											<div class="form-group">
 												<input type="text" class="form-control" id="exampleInputname1"
@@ -356,7 +356,7 @@
 											<img src="../../module/assets/images/users/1.jpg" alt="user" class="img-circle" width="60">
 										</div>
 										<div class="m-l-10">
-											<h4 class="m-b-0">Steave Jobs</h4>
+											<h4 class="m-b-0">José Quintinn</h4>
 											<p class=" m-b-0">
 												<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="67110615120927000a060e0b4904080a">[email&#160;protected]</a>
 											</p>
@@ -422,8 +422,9 @@
 								<span class="hide-menu">Lançamentos</span>
 							</a>
 							<ul aria-expanded="false" class="collapse">
-								<li><a href="paginaGerenciamentoPontoEletronicoCadastro.html">Registrar Ponto Eletrônico<i class="ti-calendar"></i></a></li>
-								<li><a href="app-chat.html">Correção de Horas <i class="ti-comment"></i></a></li>
+								<li><a href="paginaGerenciamentoPontoEletronicoCadastro.html">Histórico de Registros<i class="fa fa-clock"></i></a></li>
+								<li><a href="paginaGerenciamentoPontoEletronicoCadastro.html">Registrar Ponto Eletrônico<i class="fa fa-clock"></i></a></li>
+								<li><a href="#">Ajustes de Registro de Ponto <i class="ti-comment"></i></a></li>
 								</li>
 							</ul>
 						</li>
@@ -452,7 +453,7 @@
 			<div class="container-fluid">
 				<div class="row page-titles">
 					<div class="col-md-5 align-self-center">
-						<h4 class="text-themecolor"> {{moduleName}} </h4>
+						<h4 class="text-themecolor"> Registro de Ponto Eletrônico </h4>
 					</div>
 					<div class="col-md-7 align-self-center text-right">
 						<div class="d-flex justify-content-end align-items-center">
@@ -471,34 +472,94 @@
 						<div class="card card-body">
 							<form class="row row-space-10 m-b-10">
 								<div class="form-group col-md-6">
-									<label for="entrada_i" class="text-white">Entrada I <span class="text-danger">*</span> </label> 
-									<input id="entrada_i" name="entrada_i" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.entrada_i" class="form-control text-center" />
+									<label for="dataHoraPrimeiraEntrada" class="text-white">Entrada I <span class="text-danger">*</span> </label> 
+									<input id="dataHoraPrimeiraEntrada" name="dataHoraPrimeiraEntrada" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.dataHoraPrimeiraEntrada" autofocus maxlength="5" class="form-control text-center" />
 								</div>
 								<div class="form-group col-md-6">
-									<label for="saida_i" class="text-white">Saída I <span class="text-danger">*</span> </label> 
-									<input id="saida_i" name="saida_i" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.saida_i" class="form-control text-center" />
+									<label for="dataHoraPrimeiraSaida" class="text-white">Saída I <span class="text-danger">*</span> </label> 
+									<input id="dataHoraPrimeiraSaida" name="dataHoraPrimeiraSaida" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.dataHoraPrimeiraSaida" maxlength="5" class="form-control text-center" />
 								</div>
 								<div class="form-group col-md-6">
-									<label for="entrada_ii" class="text-white">Entrada II <span class="text-danger">*</span> </label> 
-									<input id="entrada_ii" name="entrada_ii" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.entrada_ii" class="form-control text-center" />
+									<label for="dataHoraSegundaEntrada" class="text-white">Entrada II <span class="text-danger">*</span> </label> 
+									<input id="dataHoraSegundaEntrada" name="dataHoraSegundaEntrada" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.dataHoraSegundaEntrada" maxlength="5" class="form-control text-center" />
 								</div>
 								<div class="form-group col-md-6">
-									<label for="saida_ii" class="text-white">Saída II <span class="text-danger">*</span> </label> 
-									<input id="saida_ii" name="saida_ii" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.saida_ii" class="form-control text-center" />
+									<label for="dataHoraSegundaSaida" class="text-white">Saída II <span class="text-danger">*</span> </label> 
+									<input id="dataHoraSegundaSaida" name="dataHoraSegundaSaida" type="text" placeholder="00H 00M" ng-model="gerenciadorPontoEletronicoModel.dataHoraSegundaSaida" maxlength="5" class="form-control text-center" />
 								</div>
 							</form>
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="card card-body">
-							<form>
-								<button type="submit" ng-click="save(gerenciadorPontoEletronicoModel)" class="btn btn-info col-lg-12">Registrar</button>
-							</form>
+							<div class="form-group col-md-12">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-md-10">
+											<button ng-click="save(gerenciadorPontoEletronicoModel)"  ng-disabled="!gerenciadorPontoEletronicoModel.dataHoraPrimeiraEntrada" class="btn btn-info btn-block">Registrar Ponto Eletrônico</button>
+										</div>
+										<div class="col-md-2">
+											<button ng-click="clear()" class="btn btn-danger btn-block">Cancelar</button>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
+				</div>
+
+				<div ng-if="gerenciadorPontoEletronicoList.length > 0" class="row">
+					<div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Histórico de Registro Eletrônico</h4>
+								<div class="table-responsive">
+									<table class="table table-hover">
+										<div class="col-md-4 text-right">
+											<div class="card card-body">
+												<input type="text" id="search" ng-model="search" placeholder="Pesquisar" class="form-control" />
+											</div>
+										</div>
+                                        <thead>
+                                            <tr>
+                                                <th>Código</th>
+                                                <th>Data</th>
+                                                <th>Primeira Entrada</th>
+                                                <th>Primeira Saída</th>
+                                                <th>Segunda Entrada</th>
+                                                <th>Segunda Saída</th>
+                                                <th class="text-center">Ação</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody ng-repeat="pontoEletronicoResult in gerenciadorPontoEletronicoList | filter:search">
+                                            <tr>
+                                                <td>{{pontoEletronicoResult.codigo}}</td>
+                                                <td>{{pontoEletronicoResult.dataHoraAtual}}</td>
+                                                <td>{{pontoEletronicoResult.dataHoraPrimeiraEntrada}}</td>
+                                                <td>{{pontoEletronicoResult.dataHoraPrimeiraSaida}}</td>
+                                                <td>{{pontoEletronicoResult.dataHoraSegundaEntrada}}</td>
+                                                <td>{{pontoEletronicoResult.dataHoraSegundaSaida}}</td>
+                                                <td class="text-center">
+                                                	<div class="btn-group">
+					                                	<button type="button" ng-click="" class="btn btn-primary btn-circle"><i class="ti ti-more"></i></button>
+					                                </div>
+                                                	<div class="btn-group">
+					                                   <button type="button" ng-click="update(pontoEletronicoResult)" class="btn btn-info btn-circle"><i class="fa fa-edit"></i></button>
+					                                </div>
+                                                	<div class="btn-group">
+					                                   <button type="button" ng-click="remove(pontoEletronicoResult)" class="btn btn-danger btn-circle"><i class="fa fa-trash-alt"></i></button>
+					                                </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 				</div>
 				<!-- [CONTEUDO] -->
 
