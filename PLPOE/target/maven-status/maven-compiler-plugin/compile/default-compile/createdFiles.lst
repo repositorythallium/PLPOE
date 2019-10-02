@@ -1,7 +1,6 @@
 br/plataformalancamento/pontoeletronico/connection/EntityManagerConnection.class
 br/plataformalancamento/pontoeletronico/utility/ConstantesUtility.class
 br/plataformalancamento/pontoeletronico/test/EntityManagerConnectionTest.class
-br/plataformalancamento/pontoeletronico/application/PlataformaLancamentoApplication.class
 br/plataformalancamento/pontoeletronico/service/PontoEletronicoService.class
 br/plataformalancamento/pontoeletronico/repository/PontoEletronicoRepository.class
 br/plataformalancamento/pontoeletronico/test/ExpressoesRegularesTest.class
