@@ -3,46 +3,46 @@ package br.plataformalancamento.pontoeletronico.repository;
 import java.io.Serializable;
 import java.util.List;
 
-import br.plataformalancamento.pontoeletronico.entity.PontoEletronicoEntity;
+import br.plataformalancamento.pontoeletronico.model.PontoEletronicoModel;
 
-public class PontoEletronicoRepository implements Serializable, BaseInterfaceRepository<PontoEletronicoEntity> {
+public class PontoEletronicoRepository implements Serializable, BaseInterfaceRepository<PontoEletronicoModel> {
 
 	private static final long serialVersionUID = 1L;
 	
-	private BaseRepository<PontoEletronicoEntity> baseRepositoryPontoEletronicoEntity;
+	private BaseRepository<PontoEletronicoModel> baseRepositoryPontoEletronicoEntity;
 	
 	public PontoEletronicoRepository() { 
-		baseRepositoryPontoEletronicoEntity = new BaseRepository<PontoEletronicoEntity>();
+		baseRepositoryPontoEletronicoEntity = new BaseRepository<PontoEletronicoModel>();
 	}
 
 	@Override
-	public PontoEletronicoEntity persist(PontoEletronicoEntity entity) {
+	public PontoEletronicoModel persist(PontoEletronicoModel entity) {
 		return this.baseRepositoryPontoEletronicoEntity.persist(entity);
 	}
 
 	@Override
-	public PontoEletronicoEntity delete(PontoEletronicoEntity entity) {
+	public PontoEletronicoModel delete(PontoEletronicoModel entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public PontoEletronicoEntity update(PontoEletronicoEntity entity) {
+	public PontoEletronicoModel update(PontoEletronicoModel entity) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public List<PontoEletronicoEntity> findAll() {
-		return baseRepositoryPontoEletronicoEntity.findAll(PontoEletronicoEntity.class);
+	public List<PontoEletronicoModel> findAll() {
+		return baseRepositoryPontoEletronicoEntity.findAll(PontoEletronicoModel.class);
 	}
 
 	@Override
-	public PontoEletronicoEntity findOne(Long codigoPontoEletronico) {
+	public PontoEletronicoModel findOne(Long codigoPontoEletronico) {
 		return baseRepositoryPontoEletronicoEntity.findOne(codigoPontoEletronico);
 	}
 
 	@Override
-	public PontoEletronicoEntity findOne(String nome) {
+	public PontoEletronicoModel findOne(String nome) {
 		// TODO Auto-generated method stub
 		return null;
 	}

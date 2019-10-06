@@ -8,7 +8,7 @@
 	<persistence-unit name="PLPOE_PERSISTENCE_UNIT">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-		<class>br.plataformalancamento.pontoeletronico.entity.PontoEletronicoEntity</class>
+		<class>br.plataformalancamento.pontoeletronico.model.PontoEletronicoModel</class>
 		
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/db_plpoe_desenvolvimento" />
