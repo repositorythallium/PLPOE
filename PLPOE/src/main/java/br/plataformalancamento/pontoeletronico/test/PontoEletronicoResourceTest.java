@@ -3,7 +3,7 @@ package br.plataformalancamento.pontoeletronico.test;
 import java.io.Serializable;
 import java.util.Date;
 
-import br.plataformalancamento.pontoeletronico.entity.PontoEletronicoEntity;
+import br.plataformalancamento.pontoeletronico.model.PontoEletronicoModel;
 import br.plataformalancamento.pontoeletronico.resource.PontoEletronicoResource;
 
 public class PontoEletronicoResourceTest implements Serializable {
@@ -18,28 +18,28 @@ public class PontoEletronicoResourceTest implements Serializable {
 	
 	private static void save() {
 		PontoEletronicoResource pontoEletronicoResource = new PontoEletronicoResource();
-		PontoEletronicoEntity pontoEletronicoEntity = new PontoEletronicoEntity();
-			pontoEletronicoEntity.setPrimeiraEntrada(new Date());
-			pontoEletronicoEntity.setPrimeiraSaida(new Date());
-			pontoEletronicoEntity.setSegundaEntrada(new Date());
-			pontoEletronicoEntity.setSegundaSaida(new Date());
-			pontoEletronicoEntity.setObservacao("");
-			pontoEletronicoResource.persist(pontoEletronicoEntity);
+		PontoEletronicoModel pontoEletronicoModel = new PontoEletronicoModel();
+			pontoEletronicoModel.setDataHoraPrimeiraEntrada(new Date());
+			pontoEletronicoModel.setDataHoraSegundaEntrada(new Date());
+			pontoEletronicoModel.setDataHoraPrimeiraSaida(new Date());
+			pontoEletronicoModel.setDataHoraSegundaSaida(new Date());
+			pontoEletronicoModel.setObservacao("");
+			pontoEletronicoResource.persist(pontoEletronicoModel);
 			System.out.println("Cadastro Realizado com Sucesso!");
 	}
 	
 	private static void findOne() {
 		PontoEletronicoResource pontoEletronicoResource = new PontoEletronicoResource();
-		PontoEletronicoEntity pontoEletronicoEntity = new PontoEletronicoEntity();
-			pontoEletronicoEntity.setCodigo(1L);
-			pontoEletronicoEntity = pontoEletronicoResource.findOne(pontoEletronicoEntity);
-			System.out.println("Data Primeira Entrada: " + pontoEletronicoEntity.getPrimeiraEntrada());
+		PontoEletronicoModel pontoEletronicoModel = new PontoEletronicoModel();
+			pontoEletronicoModel.setCodigo(1L);
+			pontoEletronicoModel = pontoEletronicoResource.findOne(pontoEletronicoModel);
+			System.out.println("Data Primeira Entrada: " + pontoEletronicoModel.getDataHoraPrimeiraEntrada());
 	}
 	
 	private static void findAll() {
 		PontoEletronicoResource pontoEletronicoResource = new PontoEletronicoResource();
-		for(PontoEletronicoEntity pontoEletronicoEntityResult : pontoEletronicoResource.findAll()) {
-			System.out.println("Data Primeira Entrada: " + pontoEletronicoEntityResult.getPrimeiraEntrada());
+		for(PontoEletronicoModel pontoEletronicoEntityResult : pontoEletronicoResource.findAll()) {
+			System.out.println("Data Primeira Entrada: " + pontoEletronicoEntityResult.getDataHoraPrimeiraEntrada());
 		}
 	}
 	

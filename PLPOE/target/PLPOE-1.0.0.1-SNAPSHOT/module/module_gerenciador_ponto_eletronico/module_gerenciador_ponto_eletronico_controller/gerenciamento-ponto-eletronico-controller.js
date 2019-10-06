@@ -4,6 +4,8 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 	
 	var NAME_API_PONTO_ELETRONICO = "http://localhost:8080/PLPOE-1.0.0.1-SNAPSHOT/rest/pontoEletronicoResource";
 	
+	var NAME_API_PONTO_ELETRONICO_FIND_ALL = "http://localhost:8080/PLPOE-1.0.0.1-SNAPSHOT/rest/pontoEletronicoResource/findAll";
+	
 	$scope.gerenciadorPontoEletronicoList = [];
 	
 	$scope.mesReferenciaList = [
@@ -32,7 +34,7 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 	
 	function incializador() {
 		$scope.findAll();
-		$scope.findAllArquivoJson();
+//		$scope.findAllArquivoJson();
 	};
 	
 	$scope.save = function(gerenciadorPontoEletronicoModel) {
@@ -52,7 +54,9 @@ gerenciadorPontoEletronicoModelModule.controller("gerenciadorPontoEletronicoMode
 	};
 	
 	$scope.findAll = function() {
-		console.log($http.get(NAME_API_PONTO_ELETRONICO));
+		$http.get(NAME_API_PONTO_ELETRONICO_FIND_ALL).then(function(response) {
+			$scope.gerenciadorPontoEletronicoList = response.data.gerenciadorPontoEletronicoModel;
+		});
 	};
 	
 	$scope.findAllArquivoJson = function() {

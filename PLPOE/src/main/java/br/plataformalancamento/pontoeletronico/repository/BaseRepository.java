@@ -10,7 +10,7 @@ import javax.persistence.Query;
 import org.jboss.logging.Logger;
 
 import br.plataformalancamento.pontoeletronico.connection.EntityManagerConnection;
-import br.plataformalancamento.pontoeletronico.entity.PontoEletronicoEntity;
+import br.plataformalancamento.pontoeletronico.model.PontoEletronicoModel;
 
 public class BaseRepository<T> implements Serializable {
 
@@ -31,12 +31,12 @@ public class BaseRepository<T> implements Serializable {
 	
 	@SuppressWarnings("unchecked")
 	public T findOne(Long codigoPontoEletronico) {
-		return (T) entityManager.find(PontoEletronicoEntity.class, codigoPontoEletronico);
+		return (T) entityManager.find(PontoEletronicoModel.class, codigoPontoEletronico);
 	}
 	
 	@SuppressWarnings("unchecked")
 	public List<T> findAll(Class<T> object) {
-		Query query = entityManager.createQuery("FROM " + object.getSimpleName());
+		Query query = entityManager.createQuery("SELECT class_ FROM " + object.getSimpleName() + " class_");
 		return query.getResultList();
 	}
 	

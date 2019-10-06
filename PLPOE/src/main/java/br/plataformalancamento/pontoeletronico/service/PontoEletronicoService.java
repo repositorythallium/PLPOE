@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-import br.plataformalancamento.pontoeletronico.entity.PontoEletronicoEntity;
+import br.plataformalancamento.pontoeletronico.model.PontoEletronicoModel;
 import br.plataformalancamento.pontoeletronico.repository.PontoEletronicoRepository;
 
 public class PontoEletronicoService implements Serializable {
@@ -17,8 +17,8 @@ public class PontoEletronicoService implements Serializable {
 		this.pontoEletronicoRepository = new PontoEletronicoRepository();
 	}
 	
-	public void persist(PontoEletronicoEntity pontoEletronicoEntity) {
-		this.pontoEletronicoRepository.persist(pontoEletronicoEntity);
+	public void persist(PontoEletronicoModel pontoEletronicoModel) {
+		this.pontoEletronicoRepository.persist(pontoEletronicoModel);
 	}
 	
 	public String merge() {
@@ -29,15 +29,15 @@ public class PontoEletronicoService implements Serializable {
 		return "";
 	}
 	
-	public List<PontoEletronicoEntity> findAll() {
+	public List<PontoEletronicoModel> findAll() {
 		return pontoEletronicoRepository.findAll();
 	}
 	
-	public PontoEletronicoEntity findOne(PontoEletronicoEntity pontoEletronicoEntity) {
-		return pontoEletronicoRepository.findOne(pontoEletronicoEntity.getCodigo());
+	public PontoEletronicoModel findOne(PontoEletronicoModel pontoEletronicoModel) {
+		return pontoEletronicoRepository.findOne(pontoEletronicoModel.getCodigo());
 	}
 	
-	public PontoEletronicoEntity findOne(Date dataRegistroPontoEletronico) {
+	public PontoEletronicoModel findOne(Date dataRegistroPontoEletronico) {
 		return null;
 	}
 
